@@ -9,4 +9,7 @@ class Payroll:
         return self.staff_category_pay_schedules[staff_category]
 
     def get_staff_category_pay_day(self, staff_category):
-        return self.staff_category_pay_schedules[staff_category].get_pay_date()
+        return self.staff_category_pay_schedules[staff_category].get_pay_date()\
+
+    def change_pay_date(self, staff_category, date):
+        self.staff_category_pay_schedules[staff_category].set_pay_date(date)
